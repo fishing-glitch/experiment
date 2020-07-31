@@ -229,7 +229,7 @@ ggplot(rf_cc_varimp) #Plot to show change in RMSE across mtry values
 
 ```
 
-The optimal mtry value for the RF model after subjecting it to feature selection is 9, where the RMSE value has dropped further down, and a very slight increase in the R-squared value. It is clear that removing some of the unimportant variables from the dataset improves the performance of the model while also reducing the computing power required. A comparison between the performance of all three models on the training data is shown below. Considering the RMSE as an accuracy metric, the KNN has performed the worst, while the feature selected tuned RF model performs the best. 
+The optimal mtry value for the RF model after subjecting it to feature selection is 8, where the RMSE value has dropped further down, with a very slight increase in the R-squared value. It is clear that removing some of the unimportant variables from the dataset improves the performance of the model while also reducing the computing power required. A comparison between the performance of all three models on the training data is shown below. Considering the RMSE as an accuracy metric, the KNN has performed the worst, while the feature selected tuned RF model performs the best. 
 
 ```{r message=FALSE, warning=FALSE, fig.width=9, fig.height=8}
 summary(resamples(list(
