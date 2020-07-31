@@ -23,12 +23,40 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title>Brent Oil Prices - Time Series with ML Models</title>
+      <link>/posts/brent-oil/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/brent-oil/</guid>
+      <description>IntroductionWhile traditional time series models such as the Exponential Smoothing and ARIMA families are perfectly capable of making sound forecasts, there are some instances where such models are unable to fully capture what the data is portraying. In such cases, especially where the highest predictive power is required and favoured over model interpretability, advanced machine learning methods can be useful. In this analysis, the daily prices of Brent Oil(20th May 1987 - 21st April 2020) are going to be examined.</description>
+    </item>
+    
+    <item>
       <title>Classifying Divorce</title>
       <link>/posts/divorce/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/posts/divorce/</guid>
       <description>IntroductionThe following analysis is a classification problem, where the goal is to try and predict divorce based on a “Divorce Predictors Scale”. The data was developed based on a psychology study named Gottman couples therapy, and was freely obtained via http://archive.ics.uci.edu/ml/datasets/Divorce+Predictors+data+set. The link to the original study from which this data emerged is https://dergipark.org.tr/en/pub/nevsosbilen/issue/46568/549416. The aim here is to utilise the answers by couples to 54 questions regarding their marriage to try and predict whether the marriage is intact or if divorce is imminent.</description>
+    </item>
+    
+    <item>
+      <title>Cocaine Trees - Predicting Prices with Random Forests</title>
+      <link>/posts/cocaine-prices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/cocaine-prices/</guid>
+      <description>IntroductionThe following analysis utilises data comprising of cocaine prices available on an online hidden marketplace called Dream Market, available on the deep web. This data was freely obtained at https://www.kaggle.com/everling/cocaine-listings, with further details about the data available in the description. As the title might suggest, the goal of this analysis is attempting to accurately predict the cocaine prices based on the variables provided, utlising the Random Forests (RF) method.</description>
+    </item>
+    
+    <item>
+      <title>Computer Prices with Simple Regression</title>
+      <link>/posts/computers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/computers/</guid>
+      <description>IntroductionThis analysis involves a simple prediction problem. The dataset has been designed for basic data analysis, and is suitable for applying introductory predictive methods. The goal is to simply gain an understanding into the analytical process using two basic predictive models: Linear Regression and Multiple Adaptive Regression Splines (MARS).
+The dataset contains some information about computers, with the dependant variable in this case being price, and other features including speed, RAM, screen etc.</description>
     </item>
     
     <item>
