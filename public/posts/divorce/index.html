@@ -1,21 +1,76 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Posts on fazi</title>
-		<link>/posts/</link>
-		<description>Recent content in Posts on fazi</description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>en-us</language>
-		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>Classifying Divorce</title>
-			<link>/posts/divorce/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			
-			<guid>/posts/divorce/</guid>
-			<description>IntroductionThe following analysis is a classification problem, where the goal is to try and predict divorce based on a “Divorce Predictors Scale”. The data was developed based on a psychology study named Gottman couples therapy, and was freely obtained via http://archive.ics.uci.edu/ml/datasets/Divorce+Predictors+data+set. The link to the original study from which this data emerged is https://dergipark.org.tr/en/pub/nevsosbilen/issue/46568/549416. The aim here is to utilise the answers by couples to 54 questions regarding their marriage to try and predict whether the marriage is intact or if divorce is imminent.</description>
-			<content type="html"><![CDATA[
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="Classifying Divorce">
+<meta itemprop="description" content="IntroductionThe following analysis is a classification problem, where the goal is to try and predict divorce based on a “Divorce Predictors Scale”. The data was developed based on a psychology study named Gottman couples therapy, and was freely obtained via http://archive.ics.uci.edu/ml/datasets/Divorce&#43;Predictors&#43;data&#43;set. The link to the original study from which this data emerged is https://dergipark.org.tr/en/pub/nevsosbilen/issue/46568/549416. The aim here is to utilise the answers by couples to 54 questions regarding their marriage to try and predict whether the marriage is intact or if divorce is imminent.">
+
+<meta itemprop="wordCount" content="2674">
+
+
+
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Classifying Divorce" />
+<meta property="og:description" content="IntroductionThe following analysis is a classification problem, where the goal is to try and predict divorce based on a “Divorce Predictors Scale”. The data was developed based on a psychology study named Gottman couples therapy, and was freely obtained via http://archive.ics.uci.edu/ml/datasets/Divorce&#43;Predictors&#43;data&#43;set. The link to the original study from which this data emerged is https://dergipark.org.tr/en/pub/nevsosbilen/issue/46568/549416. The aim here is to utilise the answers by couples to 54 questions regarding their marriage to try and predict whether the marriage is intact or if divorce is imminent." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/divorce/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Classifying Divorce"/>
+<meta name="twitter:description" content="IntroductionThe following analysis is a classification problem, where the goal is to try and predict divorce based on a “Divorce Predictors Scale”. The data was developed based on a psychology study named Gottman couples therapy, and was freely obtained via http://archive.ics.uci.edu/ml/datasets/Divorce&#43;Predictors&#43;data&#43;set. The link to the original study from which this data emerged is https://dergipark.org.tr/en/pub/nevsosbilen/issue/46568/549416. The aim here is to utilise the answers by couples to 54 questions regarding their marriage to try and predict whether the marriage is intact or if divorce is imminent."/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Classifying Divorce</title>
+	<link rel="stylesheet" href="/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css" integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="/">fazi</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="/posts/">Posts</a>
+				<a href="/about-hugo/">About</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://twitter.com/" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://instagram.com/" target="_blank" rel="noopener me" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a><a href="https://github.com/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="/posts/">Posts</a></li>
+			<li><a href="/about-hugo/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span> </span></div>
+				<h1>Classifying Divorce</h1>
+			</header>
+			<div class="content">
+				
 
 
 <div id="introduction" class="section level3">
@@ -390,158 +445,35 @@ legend(0.8, 0.2, legend = c(&quot;Naive Bayes&quot;, &quot;Logistic&quot;, &quot
 ## The final values used for the model were alpha = 0.1 and lambda = 0.02517439.</code></pre>
 <p>The model maximized accuracy with an alpha value of 0.1 and lambda value of 0.025. Having found the exact model parameters, an easy to interpret model has been developed for this specific use case which provides exceptionally accurate results.</p>
 </div>
-]]></content>
-		</item>
-		
-		<item>
-			<title>Visualizing Happiness - World Happiness Report 2019</title>
-			<link>/posts/whr-2019/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			
-			<guid>/posts/whr-2019/</guid>
-			<description>IntroductionThe following is a simple exercise in visualizing data. The data used is from the World Happiness Report for the year 2019, and was obtained freely from: https://www.kaggle.com/unsdsn/world-happiness?select=2019.csv. The aim is to generate some simple insights about the data using only visualizations.
-Loading the data and required libraries:
-#Load Librarieslibrary(tidyverse)library(reshape2)library(corrplot)#Read Data..whr19 &amp;lt;- read.csv(&amp;quot;whr-2019.csv&amp;quot;)Data processingBefore moving forward with the visuals, the data needs to be processed a little bit.</description>
-			<content type="html"><![CDATA[
 
-
-<div id="introduction" class="section level3">
-<h3>Introduction</h3>
-<p>The following is a simple exercise in visualizing data. The data used is from the World Happiness Report for the year 2019, and was obtained freely from: <a href="https://www.kaggle.com/unsdsn/world-happiness?select=2019.csv" class="uri">https://www.kaggle.com/unsdsn/world-happiness?select=2019.csv</a>. The aim is to generate some simple insights about the data using only visualizations.</p>
-<p>Loading the data and required libraries:</p>
-<pre class="r"><code>#Load Libraries
-
-library(tidyverse)
-library(reshape2)
-library(corrplot)
-
-#Read Data..
-whr19 &lt;- read.csv(&quot;whr-2019.csv&quot;)</code></pre>
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>2674 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> </p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="prev-post" href="/posts/whr-2019/">
+				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>Visualizing Happiness - World Happiness Report 2019</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
 </div>
-<div id="data-processing" class="section level3">
-<h3>Data processing</h3>
-<p>Before moving forward with the visuals, the data needs to be processed a little bit. The column names are slightly changed to look a bit more neat for the visuals, and a new feature called Region is added to group all the countries according to their respective regions. The regions are Asia, Europe, Middle East, North America, South America, Central America, The Caribbean, Oceania (Australia and New Zealand) and Africa. This is all carried out in the code chunk below.</p>
-<pre class="r"><code>#change column names
-colnames(whr19) &lt;- c(&quot;Rank&quot;, &quot;Country&quot;, &quot;Score&quot;,
-                     &quot;GDP_per_Cap&quot;, &quot;Social_Supp&quot;, &quot;Life_Exp&quot;,
-                     &quot;Freedom&quot;, &quot;Generosity&quot;, &quot;Corruption&quot;)
+	</main>
 
-whr19$Country &lt;- as.character(whr19$Country)
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="/">John Doe</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
 
-#add new Region variable
-whr19$Region &lt;- NA
 
-whr19$Region[which(whr19$Country %in% c(&quot;Afganistan&quot;, &quot;Armenia&quot;, &quot;Azerbaijan&quot;,&quot;Bangladesh&quot;, &quot;Bhutan&quot;, &quot;Brunei Darussalam&quot;, &quot;Cambodia&quot;, &quot;China&quot;,&quot;Georgia&quot;, &quot;Hong Kong&quot;,
-                                           &quot;India&quot;,&quot;Indonesia&quot;,&quot;Japan&quot;,&quot;Kazakhstan&quot;, &quot;North Korea&quot;, &quot;South Korea&quot;,&quot;Kyrgyzstan&quot;,&quot;Laos&quot;,&quot;Macao&quot;,&quot;Malaysia&quot;,&quot;Maldives&quot;,&quot;Mongolia&quot;,
-                                           &quot;Myanmar&quot;,&quot;Nepal&quot;,&quot;Pakistan&quot;,&quot;Philippines&quot;,&quot;Singapore&quot;,&quot;Sri Lanka&quot;,&quot;Taiwan&quot;,&quot;Tajikistan&quot;,&quot;Thailand&quot;,&quot;Timor Leste&quot;,&quot;Turkmenistan&quot;,
-                                           &quot;Uzbekistan&quot;,&quot;Vietnam&quot;))] &lt;- &quot;Asia&quot;
 
-whr19$Region[which(whr19$Country %in% c(&quot;Norway&quot;, &quot;Denmark&quot;, &quot;Iceland&quot;, &quot;Switzerland&quot;, &quot;Finland&quot;,
-                                                   &quot;Netherlands&quot;, &quot;Sweden&quot;, &quot;Austria&quot;, &quot;Ireland&quot;, &quot;Germany&quot;,
-                                                   &quot;Belgium&quot;, &quot;Luxembourg&quot;, &quot;United Kingdom&quot;, &quot;Czech Republic&quot;,
-                                                   &quot;Malta&quot;, &quot;France&quot;, &quot;Spain&quot;, &quot;Slovakia&quot;, &quot;Poland&quot;, &quot;Italy&quot;,
-                                                   &quot;Russia&quot;, &quot;Lithuania&quot;, &quot;Latvia&quot;, &quot;Moldova&quot;, &quot;Romania&quot;,
-                                                   &quot;Slovenia&quot;, &quot;Northern Cyprus&quot;, &quot;Cyprus&quot;, &quot;Estonia&quot;, &quot;Belarus&quot;,
-                                                   &quot;Serbia&quot;, &quot;Hungary&quot;, &quot;Croatia&quot;, &quot;Kosovo&quot;, &quot;Montenegro&quot;,
-                                                   &quot;Greece&quot;, &quot;Portugal&quot;, &quot;Bosnia and Herzegovina&quot;, &quot;Macedonia&quot;,
-                                                   &quot;Bulgaria&quot;, &quot;Albania&quot;, &quot;Ukraine&quot;, &quot;Turkey&quot;, &quot;North Macedonia&quot;))] &lt;- &quot;Europe&quot;
+	<script src="/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
+	
 
-whr19$Region[which(whr19$Country %in% c(&quot;Bahrain&quot;, &quot;Iraq&quot;, &quot;Iran&quot;, &quot;Israel&quot;,&quot;Jordan&quot;,&quot;Kuwait&quot;,&quot;Lebanon&quot;,&quot;Libya&quot;,&quot;Oman&quot;,&quot;Palestinian Territories&quot;,
-                                           &quot;Qatar&quot;,&quot;Saudi Arabia&quot;,&quot;Syria&quot;,&quot;United Arab Emirates&quot;,&quot;Yemen&quot;))] &lt;- &quot;Middle East&quot;
+</body>
 
-whr19$Region[which(whr19$Country %in% c(&quot;Bermuda&quot;, &quot;Canada&quot;, &quot;Greenland&quot;, 
-                                           &quot;Saint Pierre and Miquelon&quot;, &quot;United States&quot;))] &lt;- &quot;North America&quot;
-
-whr19$Region[which(whr19$Country %in% c(&quot;Belize&quot;, &quot;Costa Rica&quot;, &quot;El Salvador&quot;, &quot;Guatemala&quot;, 
-                                           &quot;Honduras&quot;,&quot;Mexico&quot;, &quot;Nicaragua&quot;, &quot;Panama&quot;))] &lt;- &quot;Central America&quot;
-
-whr19$Region[which(whr19$Country %in% c(&quot;Anguilla&quot;, &quot;Antigua and Barbuda&quot;, &quot;Aruba&quot;, &quot;Bahamas&quot;, &quot;Barbados&quot;, &quot;Bonaire&quot;, &quot;Saint Eustatius and Saba&quot;, &quot;British Virgin Islands&quot;, &quot;Cayman Islands&quot;,
-                                           &quot;Cuba&quot;, &quot;Curaçao&quot;, &quot;Dominica&quot;,&quot;Dominican Republic&quot;, &quot;Grenada&quot;, &quot;Guadeloupe&quot;, &quot;Haiti&quot;, &quot;Jamaica&quot;, &quot;Martinique&quot;, 
-                                           &quot;Monserrat&quot;, &quot;Puerto Rico&quot;, &quot;Saint-Barthélemy&quot;, &quot;St. Kitts and Nevis&quot;, &quot;Saint Lucia&quot;, &quot;Saint Martin&quot;,&quot;Saint Vincent and the Grenadines&quot;,&quot;Sint Maarten&quot;, 
-                                           &quot;Trinidad &amp; Tobago&quot;, &quot;Turks and Caicos Islands&quot;, &quot;Virgin Islands (US)&quot;))] &lt;- &quot;The Caribbean&quot;
-
-whr19$Region[which(whr19$Country %in% c(&quot;Argentina&quot;,&quot;Bolivia&quot;,&quot;Brazil&quot;,&quot;Chile&quot;,&quot;Colombia&quot;,&quot;Ecuador&quot;,&quot;Falkland Islands (Malvinas)&quot;,
-                                           &quot;French Guiana&quot;,&quot;Guyana&quot;,&quot;Paraguay&quot;, &quot;Peru&quot;, &quot;Suriname&quot;, &quot;Uruguay&quot;, &quot;Venezuela&quot;))] &lt;- &quot;South America&quot;
-
-whr19$Region[which(whr19$Country %in% c(&quot;New Zealand&quot;, &quot;Australia&quot;))] &lt;- &quot;Oceania&quot;
-whr19$Region[which(is.na(whr19$Region))] &lt;- &quot;Africa&quot;</code></pre>
-</div>
-<div id="correlation-plot-for-all-numeric-variables" class="section level3">
-<h3>Correlation plot for all numeric variables</h3>
-<pre class="r"><code>correlation &lt;- cor(whr19[,3:9])
-
-corrplot(correlation, method = &quot;square&quot;)</code></pre>
-<p><img src="/posts/WHR-2019_files/figure-html/unnamed-chunk-3-1.png" width="768" /></p>
-<p>As the key variable here is the Score (Which determines the happiness rank), it can be seen that the Score variable shares the highest correlation with GDP per capita, Social Support and Life Expectancy. It is intersting how Generosity and Score have almost no correlation with each other (according to the data). However, in such cases it is important to remember that correlation (or lack thereof) does not imply causation.</p>
-</div>
-<div id="boxplot-to-analyse-the-distribution-of-different-regions" class="section level3">
-<h3>Boxplot to analyse the distribution of different regions</h3>
-<pre class="r"><code>box &lt;- ggplot(whr19, aes(Region, Score)) +
-  geom_boxplot(aes(fill = Region)) +
-  coord_flip() + 
-  theme_minimal()
-
-box #interactive</code></pre>
-<p><img src="/posts/WHR-2019_files/figure-html/unnamed-chunk-4-1.png" width="864" /></p>
-<p>The boxplot shows the variation in Score across the different regions. The highest variations are in the Middle East and Europe. A potential reason for this may be due to the large disparity between the very rich and poor countries in both regions. The lowest range of scores are in Africa, and the highest scoring country belongs to the European region. Oceania has the lowest variation as it is only comprised of two countries.</p>
-</div>
-<div id="bar-charts-for-average-regional-performance" class="section level3">
-<h3>Bar charts for average regional performance</h3>
-<pre class="r"><code>whr19_Region &lt;- whr19[,-1:-2] %&gt;%
-  group_by(Region) %&gt;%
-  summarise_all(funs(mean))
-
-region_melt &lt;- melt(whr19_Region)
-
-bar &lt;- ggplot(region_melt, aes(Region, value, fill = Region)) +
-  geom_bar(stat = &quot;identity&quot;) +
-  facet_wrap(~variable, scales = &quot;free&quot;) +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-
-bar</code></pre>
-<p><img src="/posts/WHR-2019_files/figure-html/unnamed-chunk-5-1.png" width="864" /></p>
-<p>The above grid of bar charts highlights the average value each region obtained across all the features. The Oceania region apparently achieved the highest average scores across all the features, being only surpassed slightly by North America in GDP per capita. However, Oceania only comprises of Australia and New Zealand, thus making it a bit unfair to compare it with other regional averages. Perhaps logically combining Oceania with another region might help paint a better picture of how the scores for each feature are distributed across the regions.</p>
-</div>
-<div id="circular-barplot-of-all-countries-happiness-score-in-order" class="section level3">
-<h3>Circular barplot of all countries happiness score, in order</h3>
-<p>This is just for the aesthetics. However, there are a couple of issues with this plot. Some of the country labels are a bit distorted on closer inspection. At the time of making this plot, no solution to this text distortion was found. Perhaps it is because plotting a large number of labels artificially in a circle has its difficulties and issues. The other issue is that this same information could have been easily conveyed through a simple ordered bar chart, which would have looked much more neat. Therefore, the important conclusion to draw from here is that just because it looks complex and different doesn’t always mean it is the best. On a more positive note, the circle chart does highlight the regions quite colourfully.</p>
-<pre class="r"><code>circle_whr &lt;- whr19[,c(1:3,10)]
-circle_whr$Score &lt;- circle_whr$Score * 10
-circle_whr$Region &lt;- as.factor(circle_whr$Region)
-
-#Groups...
-circle_whr$id &lt;- seq(1, nrow(circle_whr))
-circle_whr &lt;- circle_whr %&gt;% arrange(Region)
-
-#labels...
-labeled &lt;- circle_whr
-n_bar &lt;- nrow(labeled)
-angle &lt;- 90-360*(labeled$id-0.5)/n_bar
-labeled$hjust &lt;- ifelse(angle &lt; -90, 1, 0)
-labeled$angle &lt;- ifelse(angle &lt; -90, angle+180, angle)
-
-circle &lt;- ggplot(circle_whr, aes(x = as.factor(id), y = Score, fill = Region)) +
-  geom_bar(stat = &quot;identity&quot;, alpha = 0.5) +
-  scale_fill_brewer(palette = &quot;Paired&quot;) +
-  ylim(-100,100) +
-  theme_minimal() +
-  theme(axis.text = element_blank(),
-        axis.title = element_blank(),
-        panel.grid = element_blank(),
-        plot.margin = unit(rep(-1,4), &quot;cm&quot;),
-        legend.position = c(0.53,0.5)) +
-  coord_polar() +
-  geom_text(data = labeled, aes(x = id, y = Score + 10, label = Country,
-                                   hjust = hjust),
-            color = &quot;black&quot;, fontface = &quot;bold&quot;, alpha = 1, size = 3,
-            angle = labeled$angle, inherit.aes = FALSE)
-
-circle</code></pre>
-<p><img src="/posts/WHR-2019_files/figure-html/unnamed-chunk-6-1.png" width="864" style="display: block; margin: auto;" /></p>
-</div>
-]]></content>
-		</item>
-		
-	</channel>
-</rss>
+</html>

@@ -23,6 +23,15 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title>Classifying Divorce</title>
+      <link>/posts/divorce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/divorce/</guid>
+      <description>IntroductionThe following analysis is a classification problem, where the goal is to try and predict divorce based on a “Divorce Predictors Scale”. The data was developed based on a psychology study named Gottman couples therapy, and was freely obtained via http://archive.ics.uci.edu/ml/datasets/Divorce+Predictors+data+set. The link to the original study from which this data emerged is https://dergipark.org.tr/en/pub/nevsosbilen/issue/46568/549416. The aim here is to utilise the answers by couples to 54 questions regarding their marriage to try and predict whether the marriage is intact or if divorce is imminent.</description>
+    </item>
+    
+    <item>
       <title>Visualizing Happiness - World Happiness Report 2019</title>
       <link>/posts/whr-2019/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
