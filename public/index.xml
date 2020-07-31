@@ -12,14 +12,13 @@
     
     
     <item>
-      <title>About Hugo</title>
+      <title>About</title>
       <link>/about-hugo/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about-hugo/</guid>
-      <description>Hugo is the world’s fastest framework for building websites. It is written in Go.
-It makes use of a variety of open source projects including:
- https://github.com/russross/blackfriday https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper  Learn more and contribute on GitHub.</description>
+      <description>Hi! My name&amp;rsquo;s Faizaan (Fazi in short). I have recently completed an MSc in Finance and a BSc in Actuarial Science from the UK, and have a strong interest in data science. This website serves as my personal portfolio of data analysis project.
+Each project workflow comprises of data cleaning, exploratory data analysis, and applying various predictive (machine learning) models. The projects range across a variety of topics and data types, including regression, classification and time series analysis.</description>
     </item>
     
     <item>

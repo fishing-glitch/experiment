@@ -1,17 +1,9 @@
 ---
-date: "2014-04-09"
-title: About Hugo
+title: About
 ---
 
-Hugo is the **world’s fastest framework for building websites**. It is written in Go.
+Hi! My name's Faizaan (Fazi in short). I have recently completed an MSc in Finance and a BSc in Actuarial Science from the UK, and have a strong interest in data science. This website serves as my personal portfolio of data analysis project. 
 
-It makes use of a variety of open source projects including:
+Each project workflow comprises of data cleaning, exploratory data analysis, and applying various predictive (machine learning) models. The projects range across a variety of topics and data types, including regression, classification and time series analysis. Along with the complete code, a written analysis is also included within each project, acting as a narrative through each step of the process. Majority of the projects are completed within R. This is more of a personal preference (not to say I have anything against Python). I have ultimately tried to complete each project by avoiding unnecessary complexity while remaining as simple as possible.
 
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
-
+Do feel free to contact me if you want to reach out at faizaan.shahid@gmail.com, or through the mailto button provided :) .
