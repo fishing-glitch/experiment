@@ -37,7 +37,7 @@ memory[, 3] <- as.factor(memory[, 3]) #converting Dosage to factor
 
 Firstly, the distributions of the age variable can be visualised to see how spread out the different ages of the participants are. The age distribution is right skewed, with majority of the participants falling between the ages 25 and 40. It is noteworthy that there is only one person who is 24 years old. 
 
-```{r message=FALSE, warning=FALSE, fig.width=7.5, fig.height=4}
+```{r message=FALSE, warning=FALSE, fig.width=7.5, fig.height=4.5}
 seqage <- as.vector(memory[, 1]) #create temporary vector for the visual
 
 #age distribution
@@ -53,7 +53,7 @@ rm(seqage) #removing the temporary vector
 
 The distributions of the memory score variables can also be examined. It is interesting to see that the boxplots for the before and after memory scores are almost exactly the same. This indicates that the differences are only in the margin of a few seconds, which can be visualised by the distribution of the Diff variable. 
 
-```{r message=FALSE, warning=FALSE, fig.width=9, fig.height=6}
+```{r message=FALSE, warning=FALSE, fig.width=7.5, fig.height=4.5}
 mem_melt <- melt(memory[, 5:7]) #temporary dataframe for the visual
 
 #memory scores distributions
