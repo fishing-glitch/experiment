@@ -69,6 +69,33 @@ The dataset contains some information about computers, with the dependant variab
     </item>
     
     <item>
+      <title>Mining Religious and Sacred Texts</title>
+      <link>/posts/religious-and-sacred-texts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/religious-and-sacred-texts/</guid>
+      <description>IntroductionThis is an exercise in simple text mining. Five different religious and sacred texts are analysed, namely the King James Bible, the Koran, the Book of Meditations, the Gospel of Buddha and the Book of Mormon. The analysis is structured in two segments. First, the text data is processed and some visual analysis is performed, simply to gather a better understanding about these texts.</description>
+    </item>
+    
+    <item>
+      <title>Predicting Forest Fires with Regressions</title>
+      <link>/posts/forest-fires/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/forest-fires/</guid>
+      <description>IntroductionThe following analysis aims to attempt a difficult regression task of predicting the burned area caused by forest fires. The data is based on the north-east region of Portugal, and comprises of meteorological and other data. The link to the data set is http://archive.ics.uci.edu/ml/datasets/Forest+Fires. This is based on the original work done by Cortez and Morais (2007), where the authors utilised data mining techniques to predict forest fires. A somewhat simpler approach is utlised in this analysis as compared to the original, with similarities in terms of feature engineering and error metrics.</description>
+    </item>
+    
+    <item>
+      <title>Sao Paulo Temperature - Time Series with Exponential Smoothing Models</title>
+      <link>/posts/sao-paulo-temperature/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/sao-paulo-temperature/</guid>
+      <description>IntroductionThis time series analysis involves modelling the average monthly temperature in the city of Sao Paulo, Brazil. The data spans across 74 years, and was freely obtained from the following link: https://www.kaggle.com/volpatto/temperature-timeseries-for-some-brazilian-cities?select=station_sao_paulo.csv. The goal of the analysis is to utilise three exponential smoothing models (Simple Exponential Smoothing (SES), Holt Method, Holt-Winters (HW) method) and determine which of these three models performs the best for forecasting the monthly average temperature.</description>
+    </item>
+    
+    <item>
       <title>Visualizing Happiness - World Happiness Report 2019</title>
       <link>/posts/whr-2019/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
