@@ -68,6 +68,15 @@ The dataset contains some information about computers, with the dependant variab
     </item>
     
     <item>
+      <title>Epileptic Seizure Recognition with Deep Learning</title>
+      <link>/posts/seizure_final/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/seizure_final/</guid>
+      <description>IntroductionThis project attempts to classify whether a patient is suffering from an epileptic seizure or not based on certain known features. The dataset was freely obtained from the following link: https://www.kaggle.com/harunshimanto/epileptic-seizure-recognition. To summarise the data, the features comprise of individual data points of an EEG recording, monitoring a subject’s brain activity at different points in time. Further details about the specifications of these variables can be found via the given link.</description>
+    </item>
+    
+    <item>
       <title>Mining Religious and Sacred Texts</title>
       <link>/posts/religious-and-sacred-texts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -92,17 +101,6 @@ The dataset contains some information about computers, with the dependant variab
       
       <guid>/posts/sao-paulo-temperature/</guid>
       <description>IntroductionThis time series analysis involves modelling the average monthly temperature in the city of Sao Paulo, Brazil. The data spans across 74 years, and was freely obtained from the following link: https://www.kaggle.com/volpatto/temperature-timeseries-for-some-brazilian-cities?select=station_sao_paulo.csv. The goal of the analysis is to utilise three exponential smoothing models (Simple Exponential Smoothing (SES), Holt Method, Holt-Winters (HW) method) and determine which of these three models performs the best for forecasting the monthly average temperature.</description>
-    </item>
-    
-    <item>
-      <title>Visualizing Happiness - World Happiness Report 2019</title>
-      <link>/posts/whr-2019/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/whr-2019/</guid>
-      <description>IntroductionThe following is a simple exercise in visualizing data. The data used is from the World Happiness Report for the year 2019, and was obtained freely from: https://www.kaggle.com/unsdsn/world-happiness?select=2019.csv. The aim is to generate some simple insights about the data using only visualizations.
-Loading the data and required libraries:
-#Load Librarieslibrary(tidyverse)library(reshape2)library(corrplot)#Read Data..whr19 &amp;lt;- read.csv(&amp;quot;whr-2019.csv&amp;quot;)Data processingBefore moving forward with the visuals, the data needs to be processed a little bit.</description>
     </item>
     
   </channel>
