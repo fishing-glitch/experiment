@@ -17,8 +17,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about-hugo/</guid>
-      <description>My name is Faizaan (Fazi) Shahid. I have completed an MSc in Finance and Management and a BSc in Actuarial Science from the UK, and have a strong interest in data science and analysis. This website serves as my personal portfolio of data analysis projects.
-Each project workflow comprises of data cleaning, exploratory data analysis, and applying various predictive (machine learning) models. The projects range across a variety of topics and data types, including regression, classification and time series analysis.</description>
+      <description>My name is Faizaan (Fazi) Shahid. I have completed an MSc in Finance and Management and a BSc in Actuarial Science from the UK, and have a strong interest in data science and analytics. This website serves as my personal portfolio of data analysis projects, composed from my own ideas and inspiration from other published code.
+Each project workflow comprises of data cleaning, exploratory data analysis, and applying various predictive (machine learning) models.</description>
     </item>
     
     <item>
@@ -86,21 +86,21 @@ The dataset contains some information about computers, with the dependant variab
     </item>
     
     <item>
+      <title>Mining Religious and Sacred Texts - Visualizing Clusters with UMAP</title>
+      <link>/posts/umap-clust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/umap-clust/</guid>
+      <description>IntroductionThis analysis is a continuation of the previous post regarding religious and sacred text analysis. In the previous post, a simple exploratory analysis was performed, along with an attempt to use k-means clustering to further understand the data. However, perhaps due to the size and complexity of the data, a suitable value for k could not be found. To take a different approach to clustering, the UMAP algorithim is now going to be used instead to attempt to visualize clusters in the texts (if there are any).</description>
+    </item>
+    
+    <item>
       <title>Predicting Forest Fires with Regressions</title>
       <link>/posts/forest-fires/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/posts/forest-fires/</guid>
       <description>IntroductionThe following analysis aims to attempt a difficult regression task of predicting the burned area caused by forest fires. The data is based on the north-east region of Portugal, and comprises of meteorological and other data. The link to the data set is http://archive.ics.uci.edu/ml/datasets/Forest+Fires. This is based on the original work done by Cortez and Morais (2007), where the authors utilised data mining techniques to predict forest fires. A somewhat simpler approach is utlised in this analysis as compared to the original, with similarities in terms of feature engineering and error metrics.</description>
-    </item>
-    
-    <item>
-      <title>Sao Paulo Temperature - Time Series with Exponential Smoothing Models</title>
-      <link>/posts/sao-paulo-temperature/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/sao-paulo-temperature/</guid>
-      <description>IntroductionThis time series analysis involves modelling the average monthly temperature in the city of Sao Paulo, Brazil. The data spans across 74 years, and was freely obtained from the following link: https://www.kaggle.com/volpatto/temperature-timeseries-for-some-brazilian-cities?select=station_sao_paulo.csv. The goal of the analysis is to utilise three exponential smoothing models (Simple Exponential Smoothing (SES), Holt Method, Holt-Winters (HW) method) and determine which of these three models performs the best for forecasting the monthly average temperature.</description>
     </item>
     
   </channel>
