@@ -2718,7 +2718,7 @@ corrplot(correlation, method = &quot;square&quot;)</code></pre>
   coord_flip() + 
   theme_minimal()
 
-box #interactive</code></pre>
+box </code></pre>
 <p><img src="/posts/WHR-2019_files/figure-html/unnamed-chunk-4-1.png" width="864" /></p>
 <p>The boxplot shows the variation in Score across the different regions. The highest variations are in the Middle East and Europe. A potential reason for this may be due to the large disparity between the very rich and poor countries in both regions. The lowest range of scores are in Africa, and the highest scoring country belongs to the European region. Oceania has the lowest variation as it is only comprised of two countries.</p>
 </div>
