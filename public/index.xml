@@ -22,6 +22,17 @@ Each project workflow comprises of data cleaning, exploratory data analysis, and
     </item>
     
     <item>
+      <title>Antidepressants in the UK: Exploring Prescription Data</title>
+      <link>/posts/antidep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/antidep/</guid>
+      <description>IntroductionThis is a simple exploratory analysis about the prescriptions of antidepressants in the UK. The data was freely obtained from the following link: https://www.kaggle.com/lsind18/prescriptions-of-antidepressants, where more information about the specifics can be found.
+Notes about the dataBefore progressing further, there are a couple of points that need to be noted about the data:
+1). As it is not possible to capture all information perfectly, some data can be missing.</description>
+    </item>
+    
+    <item>
       <title>Brent Oil Prices - Time Series with ML Models</title>
       <link>/posts/brent-oil/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -92,15 +103,6 @@ The dataset contains some information about computers, with the dependant variab
       
       <guid>/posts/umap-clust/</guid>
       <description>IntroductionThis analysis is a continuation of the previous post regarding religious and sacred text analysis. In the previous post, a simple exploratory analysis was performed, along with an attempt to use k-means clustering to further understand the data. However, perhaps due to the size and complexity of the data, a suitable value for k could not be found. To take a different approach to clustering, the UMAP algorithim is now going to be used instead to attempt to visualize clusters in the texts (if there are any).</description>
-    </item>
-    
-    <item>
-      <title>Predicting Forest Fires with Regressions</title>
-      <link>/posts/forest-fires/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/forest-fires/</guid>
-      <description>IntroductionThe following analysis aims to attempt a difficult regression task of predicting the burned area caused by forest fires. The data is based on the north-east region of Portugal, and comprises of meteorological and other data. The link to the data set is http://archive.ics.uci.edu/ml/datasets/Forest+Fires. This is based on the original work done by Cortez and Morais (2007), where the authors utilised data mining techniques to predict forest fires. A somewhat simpler approach is utlised in this analysis as compared to the original, with similarities in terms of feature engineering and error metrics.</description>
     </item>
     
   </channel>
