@@ -102,7 +102,7 @@ sum(is.na(AD))</code></pre>
 </div>
 <div id="simple-exploring" class="section level3">
 <h3>Simple Exploring</h3>
-<p>The key variables within this data (around which majority of the analysis revolves) are the number of patients and the number of prescriptions. Therefore, a good place to start would be to how these variables change over the years (only 3 years).</p>
+<p>The key variables within this data (around which majority of the analysis revolves) are the number of patients and the number of prescriptions. Therefore, a good place to start would be to see how these variables change over the years (only 3 years).</p>
 <pre class="r"><code>#create temporary dataframe for only relevant variables
 year_prog &lt;- AD[,c(1, 7, 8)]
 
@@ -156,7 +156,7 @@ ggplot(age_patients, aes(x = Age.Band,
 <p><img src="/posts/AntiDep_files/figure-html/unnamed-chunk-5-1.png" width="864" /></p>
 <pre class="r"><code>#remove temporary dataframe
 remove(age_patients)</code></pre>
-<p>The largest number of patients prescribed to anti-depressants are above the age of 40, which is more than half of the total of patients present within the data. The lowest number, at just about 6000 is for children between the age of 0 and 10. It should be noted that these number of patients are derived from capturing the unique NHS number present on the prescriptions, implying that each patient is recieving a prescription for some kind of antidepressant. Similarly, the number of prescriptions per age group is visualized below.</p>
+<p>The largest number of patients prescribed to anti-depressants are above the age of 40, which is more than half of the total number of patients present within the data. The lowest number, at just about 6000 is for children between the age of 0 and 10. It should be noted that these number of patients are derived from capturing the unique NHS number present on the prescriptions, implying that each patient is recieving a prescription for some kind of antidepressant. Similarly, the number of prescriptions per age group is visualized below.</p>
 <pre class="r"><code>#temporrary dataframe 
 age_items &lt;- AD[,c(6,8)]
 

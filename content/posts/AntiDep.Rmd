@@ -66,7 +66,7 @@ With these minor preprocessing steps, the data is now quite clean and ready to b
 
 ### Simple Exploring
 
-The key variables within this data (around which majority of the analysis revolves) are the number of patients and the number of prescriptions. Therefore, a good place to start would be to how these variables change over the years (only 3 years). 
+The key variables within this data (around which majority of the analysis revolves) are the number of patients and the number of prescriptions. Therefore, a good place to start would be to see how these variables change over the years (only 3 years). 
 
 ```{r message=FALSE, warning=FALSE, fig.width=9, fig.height=7}
 #create temporary dataframe for only relevant variables
@@ -129,7 +129,7 @@ ggplot(age_patients, aes(x = Age.Band,
 remove(age_patients)
 ```
 
-The largest number of patients prescribed to anti-depressants are above the age of 40, which is more than half of the total of patients present within the data. The lowest number, at just about 6000 is for children between the age of 0 and 10. It should be noted that these number of patients are derived from capturing the unique NHS number present on the prescriptions, implying that each patient is recieving a prescription for some kind of antidepressant. Similarly, the number of prescriptions per age group is visualized below. 
+The largest number of patients prescribed to anti-depressants are above the age of 40, which is more than half of the total number of patients present within the data. The lowest number, at just about 6000 is for children between the age of 0 and 10. It should be noted that these number of patients are derived from capturing the unique NHS number present on the prescriptions, implying that each patient is recieving a prescription for some kind of antidepressant. Similarly, the number of prescriptions per age group is visualized below. 
 
 ```{r message=FALSE, warning=FALSE, fig.width=9, fig.height=7}
 #temporrary dataframe 
