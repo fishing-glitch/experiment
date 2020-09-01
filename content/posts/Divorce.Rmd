@@ -94,14 +94,14 @@ summary(divorce$Status) #a summary of the dependent variable
 
 From the summary values above, it is clear that the two classes (1 and 0) are almost equal in quantity, therefore there is no class imbalance problem. This luckily makes the analysis simpler to perform.
 
-To further understand the independent variables, a correlation plot is developed to see if any of the questions provide approximately the same information to the data. 
+To further understand the independent variables, a correlation plot is developed to see if any of the questions provide approximately the same information to the data. It should be noted that with categorical data, it is better to use chi-square test or Cramer's V to measure the strength of association between the variables. However, this is a special case where the variables are rank ordered, or in other words, the categorical variables are ordinal, making it suitable to use the Spearman's correlation coefficient. 
 
 ```{r message=FALSE, warning=FALSE, fig.width=12, fig.height=12}
 divorce_num <- divorce[,1:54] #temporary dataframe created
 divorce_num[,1:54] <- sapply(divorce_num[,1:54], as.numeric) #reconverting back to numeric 
 #for the correlation function to work
 
-div_cor <- cor(divorce_num)
+div_cor <- cor(divorce_num, method = "spearman")
 corrplot(div_cor, method = "shade")
 ```
 
