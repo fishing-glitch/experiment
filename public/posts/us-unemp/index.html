@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="US Unemployment - Time Series and Neural Networks">
+<meta itemprop="description" content="IntroductionThis report differs slightly from the rest of the projects on this website. Over here, the main focus will be more on gaining an understanding of the process, as opposed to solving a specific problem. The focus here will be to simply try and understand and discuss how neural network architectures (RNN specifically) can be applied to time series data. The ultimate objective here is to appreciate the process as simply and succinctly as possible.">
+
+<meta itemprop="wordCount" content="1332">
+
+
+
+<meta itemprop="keywords" content="" /><meta property="og:title" content="US Unemployment - Time Series and Neural Networks" />
+<meta property="og:description" content="IntroductionThis report differs slightly from the rest of the projects on this website. Over here, the main focus will be more on gaining an understanding of the process, as opposed to solving a specific problem. The focus here will be to simply try and understand and discuss how neural network architectures (RNN specifically) can be applied to time series data. The ultimate objective here is to appreciate the process as simply and succinctly as possible." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/us-unemp/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="US Unemployment - Time Series and Neural Networks"/>
+<meta name="twitter:description" content="IntroductionThis report differs slightly from the rest of the projects on this website. Over here, the main focus will be more on gaining an understanding of the process, as opposed to solving a specific problem. The focus here will be to simply try and understand and discuss how neural network architectures (RNN specifically) can be applied to time series data. The ultimate objective here is to appreciate the process as simply and succinctly as possible."/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>US Unemployment - Time Series and Neural Networks</title>
+	<link rel="stylesheet" href="/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css" integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="/">Fazi_DA</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="/posts/">Projects</a>
+				<a href="/about-hugo/">About</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="mailto:faizaan.shahid@gmail.com" target="_blank" rel="noopener me" title="Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="/posts/">Projects</a></li>
+			<li><a href="/about-hugo/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span> </span></div>
+				<h1>US Unemployment - Time Series and Neural Networks</h1>
+			</header>
+			<div class="content">
+				
+
+
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>This report differs slightly from the rest of the projects on this website. Over here, the main focus will be more on gaining an understanding of the process, as opposed to solving a specific problem. The focus here will be to simply try and understand and discuss how neural network architectures (RNN specifically) can be applied to time series data. The ultimate objective here is to appreciate the process as simply and succinctly as possible.</p>
+</div>
+<div id="notes" class="section level3">
+<h3>Notes</h3>
+<p>The data was obtained from the following website: <a href="https://fred.stlouisfed.org/series/UNRATE" class="uri">https://fred.stlouisfed.org/series/UNRATE</a> The reason the up-to-date monthly US Unemployment rate is chosen is to highlight a very specific aspect of univariate time series analysis, which will be discussed later on.</p>
+<p>Various online sources have been used as a reference for this brief report, to validate both the written text and code used. All sources used are linked as follows:</p>
+<p><a href="https://machinelearningmastery.com/how-to-develop-lstm-models-for-time-series-forecasting/" class="uri">https://machinelearningmastery.com/how-to-develop-lstm-models-for-time-series-forecasting/</a></p>
+<p><a href="https://medium.com/@marianne.benkamoun/stock-price-prediction-using-recurrent-neural-networks-369c21817da8" class="uri">https://medium.com/@marianne.benkamoun/stock-price-prediction-using-recurrent-neural-networks-369c21817da8</a></p>
+<p><a href="https://keras.io/api/layers/recurrent_layers/lstm/" class="uri">https://keras.io/api/layers/recurrent_layers/lstm/</a></p>
+<p><a href="https://www.tensorflow.org/guide/keras/rnn" class="uri">https://www.tensorflow.org/guide/keras/rnn</a></p>
+<p><a href="https://towardsdatascience.com/understanding-neural-networks-from-neuron-to-rnn-cnn-and-deep-learning-cd88e90e0a90" class="uri">https://towardsdatascience.com/understanding-neural-networks-from-neuron-to-rnn-cnn-and-deep-learning-cd88e90e0a90</a></p>
+<p><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" class="uri">http://colah.github.io/posts/2015-08-Understanding-LSTMs/</a></p>
+<p><a href="https://stats.stackexchange.com/q/222584" class="uri">https://stats.stackexchange.com/q/222584</a></p>
+<p><a href="https://towardsdatascience.com/how-not-to-use-machine-learning-for-time-series-forecasting-avoiding-the-pitfalls-19f9d7adf424" class="uri">https://towardsdatascience.com/how-not-to-use-machine-learning-for-time-series-forecasting-avoiding-the-pitfalls-19f9d7adf424</a></p>
+<p>The analysis is carried out in Python.</p>
+</div>
+<div id="loading-the-data" class="section level3">
+<h3>Loading the Data</h3>
+<pre class="python"><code>#libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Dense, LSTM
+
+#load data
+unemp = pd.read_csv(&quot;UNRATE.csv&quot;)</code></pre>
+<p>The data comprises of the monthly US Unemployment rate for 866 months (observations) in total. This ranges from January 1948 to August 2020. There is a good amount of historical data present to conduct analysis. The following chart visualizes the progression of this rate through time.</p>
+<p><img src="/images/Rate-with-time.png" /></p>
+<p>As it usually is with economic indicators, the data here shows periods of high and low unemployment one after the other. However, there isn’t any strong seasonal or strictly cyclical pattern present. The intensity of how high or low the rates can go also has no apparent pattern or trend.</p>
+</div>
+<div id="data-processing" class="section level3">
+<h3>Data Processing</h3>
+<p>Before applying the model, the data needs to be processed. Firstly, a 2 dimensional numpy array of the monthly rates is created.</p>
+<pre class="python"><code>rate = unemp.iloc[:,1] #select rate column
+rate = np.array(rate) #convert to array
+rate = rate.reshape(-1,1) #convert to 2-dimensional array</code></pre>
+<p>Next, the data is split into different sequences such that the previous 6 time steps (or lagged values) are used as inputs to output the immediate next time step. The inputs are denoted by X and the output by Y.</p>
+<pre class="python"><code>x1 = rate[0:len(rate)-6]
+x2 = rate[1:len(rate)-5]
+x3 = rate[2:len(rate)-4]
+x4 = rate[3:len(rate)-3]
+x5 = rate[4:len(rate)-2]
+x6 = rate[5:len(rate)-1]
+X = np.concatenate([x1,x2,x3,x4,x5,x6], axis = 1) #inputs
+
+Y = rate[6:len(rate)] #output</code></pre>
+<p>Usually the data is subjected to scaling or normalizing procedures as this is recommended before applying a predictive model. However, in this case it is not really necessary as all the independent values (X) are mostly within a similar range, so this will not severely impact the model.</p>
+<p>X then needs to be converted into a 3-dimensional object as this is required by LSTM.</p>
+<pre class="python"><code>X = np.reshape(X, (X.shape[0],1,X.shape[1]))</code></pre>
+<p>Finally, the inputs and outputs are split into training and testing partitions. The last 12 months (1 year) is being used as the testing partition, to test how well the model will fit on unseen data.</p>
+<pre class="python"><code>X_train = X[:854,:,:]
+X_test = X[854:,:,:]
+Y_train = Y[:854,:]
+Y_test = Y[854:,:]</code></pre>
+</div>
+<div id="single-layer-lstm" class="section level3">
+<h3>Single Layer LSTM</h3>
+<p>From the different neural network models present, the Recurrent Neural Network (RNN) architecture tends to be preferred when it comes to forecasting time series data. This is because of the structure of a RNN itself. A RNN layer essentially loops over the time steps previously defined. In doing so, it is able to “remember” or “memorize” information with time, which is particularly useful for time series forecasting, as it is able to remember and learn from the past values of the variable to form future predictions. While theoretically this sounds optimal, in practice RNNs aren’t able to memorize information too far back in time due to its loss function exponentially approaching zero (vanishing gradient problem). In the vanishing gradient problem, the model is unable to effectively update its weights, or sometimes even stop training the model altogether.</p>
+<p>As an improvement upon the traditional RNN and to counter the vanishing gradient problem, the Long Short-Term Memory (LSTM) model exists. To describe it as simply as possible, the LSTM is a variant of the RNN, where the recurrent layer has a slightly different structure than the standard RNN. This different structure enables the LSTM to “remember” much longer term data, making LSTM models more suitable for time series analysis, as it is able to account for information much further back in time.</p>
+<p>To forecast US Unemployment rates, two LSTM models are going to be run: A single layer LSTM and a stacked LSTM. A single layer LSTM, as the name suggests, consists of only a single hidden LSTM layer and an output layer. A simple single layer LSTM model is run below, with 20 units being run for 100 epochs. The model is run 4 times, with 4 graphs being plotted to show the difference between actual and predicted values.</p>
+<pre class="python"><code>#Single Layer
+
+model_single = Sequential()
+model_single.add(LSTM(20, activation = &#39;relu&#39;, input_shape = (1,6)))
+model_single.add(Dense(1))
+model_single.compile(optimizer = &#39;adam&#39;, loss = &#39;mse&#39;) #model
+
+model_single.fit(X_train, Y_train,epochs = 100, verbose = 2) #fit on training data
+
+predicted_single = model_single.predict(X_test) #predict on test data
+
+plt.figure(figsize=(10,8))
+plt.plot(Y_test, label = &#39;Test Data&#39;)
+plt.plot(predicted_single, label = &#39;Single Model&#39;)
+plt.legend(loc = &#39;best&#39;)
+plt.show() #plot</code></pre>
+<p><img src="/images/Single-Model-1.png" /></p>
+<p><img src="/images/Single-Model-2.png" /></p>
+<p><img src="/images/Single-Model-3.png" /></p>
+<p><img src="/images/Single-Model-4.png" /></p>
+</div>
+<div id="stacked-lstm" class="section level3">
+<h3>Stacked LSTM</h3>
+<p>Having run the single layer LSTM model above, now a more robust approach via a stacked LSTM is applied. This is the same as a single layer LSTM, except two or more layers can be used to improve performance. Generally 2 layers in an LSTM is sufficient to improve performance significantly, so only 2 will be used here. Similar to the single layer, 4 different charts are shown here as well.</p>
+<pre class="python"><code>#Stacked LSTM model
+
+model_stacked = Sequential()
+model_stacked.add(LSTM(20, activation = &#39;relu&#39;, 
+               return_sequences = True, input_shape = (1,6)))
+model_stacked.add(LSTM(20, activation= &#39;relu&#39;))
+model_stacked.add(Dense(1))
+model_stacked.compile(optimizer = &#39;adam&#39;, loss = &#39;mse&#39;) #model
+
+model_stacked.fit(X_train, Y_train,epochs = 100, verbose = 2) #fit on training data
+
+predicted_stack = model_stacked.predict(X_test) #predict on test data
+
+plt.figure(figsize=(10,8))
+plt.plot(Y_test, label = &#39;Test Data&#39;)
+plt.plot(predicted_stack, label = &#39;Stacked Model&#39;)
+plt.legend(loc = &#39;best&#39;)
+plt.show() #plot</code></pre>
+<p><img src="/images/Stack-Model-1.png" /></p>
+<p><img src="/images/Stack-Model-2.png" /></p>
+<p><img src="/images/Stack-Model-3.png" /></p>
+<p><img src="/images/Stack-Model-4.png" /></p>
+</div>
+<div id="results" class="section level3">
+<h3>Results</h3>
+<p>Having run the models and plotting the predicted values, the results show an interesting trend. Up until month 6 from the 12 month total, the model appears to be going hand in hand with the actual values, indicating a small error range and a good accuracy. However, it is at the moment when the extreme change takes place that the models start to fail at being accurate. This is the reason that this specific data was chosen, as due to Covid-19 the US Unemployment rate spiked significantly. This spike, although shown in the predicted values, is not accurately in line with the actual values.</p>
+<p>Also, upon careful inspection, it can be clearly seen that the only reason this spike is actually visualized is because the independent variables are all just the lagged values of the target variable, thereby subjecting this entire process to autocorrelation. This may work in certain situations, such as for believers in the efficient market hypothesis who are trying to forecast stock or other asset prices based solely on previous data. However, the US Unemployment rate, being an economic indicator, has nothing to do with the efficient market hypothesis, making forecasting based on lagged values and relying on autocorrelation unsuitable for this specific dataset.</p>
+<p>The conclusion here is that although LSTM models are quite powerful and useful, care should be taken as to where they are being applied. In this particular case, had there been additional variables explaining the unemployment rate apart from its own lagged values, the results may have been different and the model could possibly predict such drastic spikes better. But as in this case there are only lagged values, this analysis should not be taken for granted as being accurate or reliable. However, as far as the model itself goes, it seems to have done its job well of understanding the general trend of how the data goes, and perhaps with further hyperparameter tuning and better independent variables, the results may improve further.</p>
+</div>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1332 Words</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="next-post" href="/posts/sao-paulo-temperature/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;</span><br><span>Sao Paulo Temperature - Time Series with Exponential Smoothing Models</span>
+			</a>
+			<a class="prev-post" href="/posts/accidents-canada/">
+				<span class="post-nav-label">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>Vehicle Accidents in Canada - Exploring and Classifying Severity</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="/">Faizaan Shahid</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>
