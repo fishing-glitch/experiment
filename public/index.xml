@@ -87,21 +87,21 @@ The dataset contains some information about computers, with the dependant variab
     </item>
     
     <item>
+      <title>House Price Predictions with Clusters and Regressions</title>
+      <link>/posts/house-price/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/house-price/</guid>
+      <description>IntroductionThis analysis involves combining two modelling techniques to predict house prices: clustering and regressions. The data describes real estate valuations in the Xindian Dsitrict, New Tapei City, Taiwan, and was obtained from the following link: http://archive.ics.uci.edu/ml/datasets/Real+estate+valuation+data+set. While the original data file is in the xlsx format, some quick preprocessing was done in Excel (shorten variable names and convert to csv), just to make things more convenient. There are 7 variables, namely:</description>
+    </item>
+    
+    <item>
       <title>Mining Religious and Sacred Texts</title>
       <link>/posts/religious-and-sacred-texts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/posts/religious-and-sacred-texts/</guid>
       <description>IntroductionThis is an exercise in simple text mining. Five different religious and sacred texts are analysed, namely the King James Bible, the Koran, the Book of Meditations, the Gospel of Buddha and the Book of Mormon. The analysis is structured in two segments. First, the text data is processed and some visual analysis is performed, simply to gather a better understanding about these texts.</description>
-    </item>
-    
-    <item>
-      <title>Mining Religious and Sacred Texts - Visualizing Clusters with UMAP</title>
-      <link>/posts/umap-clust/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/umap-clust/</guid>
-      <description>IntroductionThis analysis is a continuation of the previous post regarding religious and sacred text analysis. In the previous post, a simple exploratory analysis was performed, along with an attempt to use k-means clustering to further understand the data. However, perhaps due to the size and complexity of the data, a suitable value for k could not be found. To take a different approach to clustering, the UMAP algorithim is now going to be used instead to attempt to visualize clusters in the texts (if there are any).</description>
     </item>
     
   </channel>
