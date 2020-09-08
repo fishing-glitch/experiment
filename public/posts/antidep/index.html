@@ -7,16 +7,16 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="theme-color" content="#494f5c">
 	<meta name="msapplication-TileColor" content="#494f5c">
-<meta itemprop="name" content="Antidepressants in the UK: Exploring Prescription Data">
+<meta itemprop="name" content="Antidepressants in the UK - Exploring Prescription Data">
 <meta itemprop="description" content="IntroductionThis is a simple exploratory analysis about the prescriptions of antidepressants in the UK. The data was freely obtained from the following link: https://www.kaggle.com/lsind18/prescriptions-of-antidepressants, where more information about the specifics can be found.
 Notes about the dataBefore progressing further, there are a couple of points that need to be noted about the data:
 1). As it is not possible to capture all information perfectly, some data can be missing.">
 
-<meta itemprop="wordCount" content="2202">
+<meta itemprop="wordCount" content="2215">
 
 
 
-<meta itemprop="keywords" content="" /><meta property="og:title" content="Antidepressants in the UK: Exploring Prescription Data" />
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Antidepressants in the UK - Exploring Prescription Data" />
 <meta property="og:description" content="IntroductionThis is a simple exploratory analysis about the prescriptions of antidepressants in the UK. The data was freely obtained from the following link: https://www.kaggle.com/lsind18/prescriptions-of-antidepressants, where more information about the specifics can be found.
 Notes about the dataBefore progressing further, there are a couple of points that need to be noted about the data:
 1). As it is not possible to capture all information perfectly, some data can be missing." />
@@ -24,7 +24,7 @@
 <meta property="og:url" content="/posts/antidep/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Antidepressants in the UK: Exploring Prescription Data"/>
+<meta name="twitter:title" content="Antidepressants in the UK - Exploring Prescription Data"/>
 <meta name="twitter:description" content="IntroductionThis is a simple exploratory analysis about the prescriptions of antidepressants in the UK. The data was freely obtained from the following link: https://www.kaggle.com/lsind18/prescriptions-of-antidepressants, where more information about the specifics can be found.
 Notes about the dataBefore progressing further, there are a couple of points that need to be noted about the data:
 1). As it is not possible to capture all information perfectly, some data can be missing."/>
@@ -36,7 +36,7 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
 	<link rel="shortcut icon" href="/favicon.ico">
 
-	<title>Antidepressants in the UK: Exploring Prescription Data</title>
+	<title>Antidepressants in the UK - Exploring Prescription Data</title>
 	<link rel="stylesheet" href="/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css" integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin="anonymous">
 	
 </head>
@@ -73,7 +73,7 @@
 		<article class="thin">
 			<header class="post-header">
 				<div class="post-meta"><span> </span></div>
-				<h1>Antidepressants in the UK: Exploring Prescription Data</h1>
+				<h1>Antidepressants in the UK - Exploring Prescription Data</h1>
 			</header>
 			<div class="content">
 				
@@ -117,13 +117,20 @@ head(AD)</code></pre>
 ## 4           ABBEY MEDICAL CENTRE        F82625    40-59 Antidepressants
 ## 5           ABBEY MEDICAL CENTRE        F82625  60 plus Antidepressants
 ## 6 BARKING MEDICAL GROUP PRACTICE        F82018   Nov-17 Antidepressants
-##   No..of.identifiable.patients No..of.items.prescribed.to.identifiable.patients
-## 1                            2                                                3
-## 2                           24                                              105
-## 3                           78                                              389
-## 4                          150                                             1060
-## 5                           76                                              642
-## 6                            3                                                7</code></pre>
+##   No..of.identifiable.patients
+## 1                            2
+## 2                           24
+## 3                           78
+## 4                          150
+## 5                           76
+## 6                            3
+##   No..of.items.prescribed.to.identifiable.patients
+## 1                                                3
+## 2                                              105
+## 3                                              389
+## 4                                             1060
+## 5                                              642
+## 6                                                7</code></pre>
 <p>The data is comprised of 10 variables including the specific year, geographic details, practise information, number of patients and the number of prescriptions belonging to each specific practise.</p>
 <pre class="r"><code>#Factorize variables
 AD$Financial.Year &lt;- as.factor(AD$Financial.Year)
@@ -363,7 +370,7 @@ remove(region_ccg)</code></pre>
 			</div>
 			<hr class="post-end">
 			<footer class="post-info">
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>2202 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>2215 Words</p>
 			</footer>
 		</article>
 		<div class="post-nav thin">

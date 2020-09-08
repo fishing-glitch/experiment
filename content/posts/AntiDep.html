@@ -1,5 +1,5 @@
 ---
-title: "Antidepressants in the UK: Exploring Prescription Data"
+title: "Antidepressants in the UK - Exploring Prescription Data"
 output: html_notebook
 ---
 
@@ -43,13 +43,20 @@ head(AD)</code></pre>
 ## 4           ABBEY MEDICAL CENTRE        F82625    40-59 Antidepressants
 ## 5           ABBEY MEDICAL CENTRE        F82625  60 plus Antidepressants
 ## 6 BARKING MEDICAL GROUP PRACTICE        F82018   Nov-17 Antidepressants
-##   No..of.identifiable.patients No..of.items.prescribed.to.identifiable.patients
-## 1                            2                                                3
-## 2                           24                                              105
-## 3                           78                                              389
-## 4                          150                                             1060
-## 5                           76                                              642
-## 6                            3                                                7</code></pre>
+##   No..of.identifiable.patients
+## 1                            2
+## 2                           24
+## 3                           78
+## 4                          150
+## 5                           76
+## 6                            3
+##   No..of.items.prescribed.to.identifiable.patients
+## 1                                                3
+## 2                                              105
+## 3                                              389
+## 4                                             1060
+## 5                                              642
+## 6                                                7</code></pre>
 <p>The data is comprised of 10 variables including the specific year, geographic details, practise information, number of patients and the number of prescriptions belonging to each specific practise.</p>
 <pre class="r"><code>#Factorize variables
 AD$Financial.Year &lt;- as.factor(AD$Financial.Year)
