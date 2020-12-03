@@ -87,21 +87,21 @@ The dataset contains some information about computers, with the dependant variab
     </item>
     
     <item>
+      <title>Finance and Data Analysis: Portfolio Optimization and Returns</title>
+      <link>/posts/finance-portfolio-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/finance-portfolio-analysis/</guid>
+      <description>IntroductionThe purpose of this project is to highlight potential applications of data analysis within the finance industry. When it comes to choosing viable securities to invest in based on a certain criteria, there are different methods that can be used, including fundamental or quantitative analysis. The focus in this project is on a quantitative approach, using the price of 10 different stocks to determine an optimum portfolio that generates required returns based on certain risks.</description>
+    </item>
+    
+    <item>
       <title>House Price Predictions with Clusters and Regressions</title>
       <link>/posts/house-price/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/posts/house-price/</guid>
       <description>IntroductionThis analysis involves combining two modelling techniques to predict house prices: clustering and regressions. The data describes real estate valuations in the Xindian Dsitrict, New Tapei City, Taiwan, and was obtained from the following link: http://archive.ics.uci.edu/ml/datasets/Real+estate+valuation+data+set. While the original data file is in the xlsx format, some quick preprocessing was done in Excel (shorten variable names and convert to csv), just to make things more convenient. There are 7 variables, namely:</description>
-    </item>
-    
-    <item>
-      <title>Mining Religious and Sacred Texts</title>
-      <link>/posts/religious-and-sacred-texts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/religious-and-sacred-texts/</guid>
-      <description>IntroductionThis is an exercise in simple text mining. Five different religious and sacred texts are analysed, namely the King James Bible, the Koran, the Book of Meditations, the Gospel of Buddha and the Book of Mormon. The analysis is structured in two segments. First, the text data is processed and some visual analysis is performed, simply to gather a better understanding about these texts.</description>
     </item>
     
   </channel>
