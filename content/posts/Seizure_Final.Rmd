@@ -87,13 +87,21 @@ In such a case of imbalanced classes, it is important that there should be some 
 X = seizure.loc[:, seizure.columns != 'y']
 y = seizure.loc[:, 'y']
 
-#scale the independent variables and convert output to categorical
-X = sklearn.preprocessing.scale(X)
+#convert output to categorical
 y = to_categorical(y)
 
 #balance classes by random undersampling
 undersample = RandomUnderSampler(sampling_strategy = 'majority')
 X_under, y_under = undersample.fit_resample(X, y)
+
+#train_test split
+X_train, X_test, Y_train, Y_test = train_test_split(X_under, y_under, 
+                                                    test_size = 0.2)
+
+#scale the independent variables
+X_train = sklearn.preprocessing.scale(X_train)
+X_test = sklearn.preprocessing.scale(X_test)
+
 ```
 
 
@@ -102,10 +110,6 @@ X_under, y_under = undersample.fit_resample(X, y)
 Having processed the data, it is now time to build the neural network model. Initially, the data is split into training and testing partitions (80/20 split). To reach a reasonable level of depth, 3 hidden layers are used, each with an approximately proportional decrease in the number of neurons available to allow smooth convergence from 178 input nodes to 2 output nodes (representing the 2 classes). Since this is a classification task, the sigmoid activation function is generally preferred for the output layer, and accuracy is used as the performance metric. The number of epochs is set to let the model undergo 100 iterations over the entire dataset. 
 
 ```{python, engine.path = 'C:\\Users\\faiza\\Anaconda3\\python.exe'}
-#train_test split
-X_train, X_test, Y_train, Y_test = train_test_split(X_under, y_under, 
-                                                    test_size = 0.2)
-
 #A deep NN model
 model_d = Sequential()
 model_d.add(Dense(120, activation = 'relu', input_dim = 178))
@@ -182,7 +186,7 @@ The environment is setup, with a default train-test split of 70/30 (refer to the
 
 ```{python, engine.path = 'C:\\Users\\faiza\\Anaconda3\\python.exe'}
 #setup for pycaret
-seizure_pc = setup(seizure_df, target = 'y', html = False, silent = True, verbose=False)
+seizure_pc = setup(seizure_df, target = 'y', html = False, silent = True, verbose=False, normalize = True)
 ```
 
 ```{python, engine.path = 'C:\\Users\\faiza\\Anaconda3\\python.exe'}
