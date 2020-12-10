@@ -10,7 +10,7 @@
 <meta itemprop="name" content="Epileptic Seizure Recognition with Deep Learning">
 <meta itemprop="description" content="IntroductionThis project attempts to classify whether a patient is suffering from an epileptic seizure or not based on certain known features. The dataset was freely obtained from the following link: https://www.kaggle.com/harunshimanto/epileptic-seizure-recognition. To summarise the data, the features comprise of individual data points of an EEG recording, monitoring a subject’s brain activity at different points in time. Further details about the specifications of these variables can be found via the given link.">
 
-<meta itemprop="wordCount" content="1769">
+<meta itemprop="wordCount" content="1766">
 
 
 
@@ -161,7 +161,7 @@ model_d.add(Dense(1, activation = &#39;sigmoid&#39;))
 model_d.compile(optimizer = &#39;adam&#39;, loss = &#39;binary_crossentropy&#39;,
                 metrics = [&#39;accuracy&#39;])
 model_d.fit(X_train, Y_train, epochs = 100, verbose = 0)</code></pre>
-<pre><code>## &lt;tensorflow.python.keras.callbacks.History object at 0x0000000038F3DF48&gt;</code></pre>
+<pre><code>## &lt;tensorflow.python.keras.callbacks.History object at 0x0000000040F4A8C8&gt;</code></pre>
 <p>Once the model is run, the performance over both the training and testing set is noted.</p>
 <pre class="python"><code>#Training set accuracy
 scores_d = model_d.evaluate(X_train, Y_train, verbose=False)
@@ -170,8 +170,8 @@ print(&quot;Training Accuracy: %.2f%%\n&quot; % (scores_d[1]*100))</code></pre>
 <pre class="python"><code>#Testing set accuracy
 scores_d = model_d.evaluate(X_test, Y_test, verbose=False)
 print(&quot;Testing Accuracy: %.2f%%\n&quot; % (scores_d[1]*100))</code></pre>
-<pre><code>## Testing Accuracy: 96.20%</code></pre>
-<p>The training set achieves a spectacular 100% accuracy. However, this may be too good to be true, as overfitting is a possibility. The testing set accuracy confirms this, reaching a lower value of about 95%. This is still a very good result from just a simple model put together. The performance is further emphasised by the ROC curve, which closely resembles that of a perfect model. Perhaps with further hyperparameter tuning, a more detailed and potentially even deeper model can be created to improve accuracy even further.</p>
+<pre><code>## Testing Accuracy: 95.98%</code></pre>
+<p>The training set achieves a spectacular 100% accuracy. However, this may be too good to be true, as overfitting is a possibility. The testing set accuracy confirms this, reaching a lower value. This is still a very good result from just a simple model put together. The performance is further emphasised by the ROC curve, which closely resembles that of a perfect model. Perhaps with further hyperparameter tuning, a more detailed and potentially even deeper model can be created to improve accuracy even further.</p>
 <pre class="python"><code>#ROC curve
 
 # y_test_pred_probs_d = model_d.predict(X_test)
@@ -216,39 +216,39 @@ seizure_logistic = create_model(&#39;lr&#39;)</code></pre>
 <pre><code>## [2K
 [2K
       Accuracy     AUC  Recall   Prec.      F1   Kappa     MCC
-## 0       0.6087  0.5391  0.7516  0.5845  0.6576  0.2174  0.2268
-## 1       0.6366  0.5805  0.7640  0.6089  0.6777  0.2733  0.2826
-## 2       0.5901  0.5218  0.7329  0.5700  0.6413  0.1801  0.1880
-## 3       0.6025  0.4986  0.7888  0.5747  0.6649  0.2050  0.2209
-## 4       0.5963  0.5106  0.7702  0.5714  0.6561  0.1925  0.2054
-## 5       0.6149  0.5672  0.7391  0.5920  0.6575  0.2298  0.2373
-## 6       0.6304  0.5479  0.8385  0.5921  0.6941  0.2609  0.2869
-## 7       0.6087  0.5024  0.8199  0.5764  0.6769  0.2174  0.2398
-## 8       0.6149  0.5218  0.7888  0.5853  0.6720  0.2298  0.2451
-## 9       0.6324  0.5622  0.7578  0.6070  0.6740  0.2642  0.2728
-## Mean    0.6136  0.5352  0.7752  0.5862  0.6672  0.2270  0.2406
-## SD      0.0148  0.0271  0.0324  0.0131  0.0141  0.0296  0.0309</code></pre>
+## 0       0.6056  0.5624  0.7516  0.5817  0.6558  0.2112  0.2208
+## 1       0.6149  0.5447  0.7453  0.5911  0.6593  0.2298  0.2381
+## 2       0.6304  0.5335  0.7950  0.5981  0.6827  0.2609  0.2763
+## 3       0.5745  0.4767  0.7391  0.5561  0.6347  0.1491  0.1579
+## 4       0.5901  0.4833  0.7764  0.5656  0.6545  0.1801  0.1941
+## 5       0.6149  0.5083  0.8137  0.5822  0.6788  0.2298  0.2505
+## 6       0.5932  0.5142  0.7764  0.5682  0.6562  0.1863  0.2003
+## 7       0.5714  0.5097  0.7329  0.5540  0.6310  0.1429  0.1509
+## 8       0.6429  0.5570  0.8199  0.6055  0.6966  0.2857  0.3055
+## 9       0.6012  0.5231  0.7688  0.5748  0.6578  0.2033  0.2159
+## Mean    0.6039  0.5213  0.7719  0.5777  0.6607  0.2079  0.2210
+## SD      0.0217  0.0273  0.0289  0.0164  0.0194  0.0433  0.0463</code></pre>
 <pre class="python"><code>#run ensemble models
 seizure_ensemble = compare_models(whitelist = models(type=&#39;ensemble&#39;).index.tolist(), fold = 3)</code></pre>
 <pre><code>## [2K
 [2K
                              Model  Accuracy     AUC  Recall   Prec.      F1  \
-## 0           Extra Trees Classifier    0.9615  0.9934  0.9621  0.9611  0.9615   
-## 1  Light Gradient Boosting Machine    0.9568  0.9927  0.9578  0.9561  0.9569   
-## 2              CatBoost Classifier    0.9546  0.9929  0.9640  0.9464  0.9551   
-## 3        Extreme Gradient Boosting    0.9537  0.9919  0.9596  0.9485  0.9540   
-## 4     Gradient Boosting Classifier    0.9453  0.9904  0.9640  0.9296  0.9464   
-## 5         Random Forest Classifier    0.9435  0.9849  0.9193  0.9661  0.9421   
-## 6             Ada Boost Classifier    0.9217  0.9773  0.9348  0.9113  0.9228   
+## 0           Extra Trees Classifier    0.9615  0.9933  0.9615  0.9616  0.9615   
+## 1              CatBoost Classifier    0.9571  0.9926  0.9621  0.9530  0.9574   
+## 2  Light Gradient Boosting Machine    0.9565  0.9917  0.9559  0.9572  0.9565   
+## 3        Extreme Gradient Boosting    0.9531  0.9910  0.9590  0.9481  0.9534   
+## 4     Gradient Boosting Classifier    0.9478  0.9899  0.9615  0.9361  0.9486   
+## 5         Random Forest Classifier    0.9466  0.9867  0.9192  0.9724  0.9450   
+## 6             Ada Boost Classifier    0.9220  0.9707  0.9329  0.9135  0.9229   
 ## 
 ##     Kappa     MCC  TT (Sec)  
-## 0  0.9230  0.9231    0.2560  
-## 1  0.9136  0.9137    2.1463  
-## 2  0.9093  0.9095   40.2411  
-## 3  0.9074  0.9075    1.1034  
-## 4  0.8906  0.8914    9.6551  
-## 5  0.8869  0.8880    0.1172  
-## 6  0.8434  0.8438    2.1115</code></pre>
+## 0  0.9230  0.9231    0.2634  
+## 1  0.9143  0.9145   39.1980  
+## 2  0.9130  0.9131    2.1826  
+## 3  0.9062  0.9065    1.1456  
+## 4  0.8956  0.8961    9.0717  
+## 5  0.8931  0.8945    0.1204  
+## 6  0.8441  0.8447    1.9151</code></pre>
 <p>The Logistic Regression performed the worst, reaching a mean accuracy value of only approximately 60%. This is also illustrated by its ROC curve shown below.</p>
 <pre class="python"><code># plot_model(seizure_logistic)</code></pre>
 <div class="figure">

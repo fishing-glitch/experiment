@@ -138,7 +138,7 @@ print("Testing Accuracy: %.2f%%\n" % (scores_d[1]*100))
 ```
 
 
-The training set achieves a spectacular 100% accuracy. However, this may be too good to be true, as overfitting is a possibility. The testing set accuracy confirms this, reaching a lower value of about 95%. This is still a very good result from just a simple model put together. The performance is further emphasised by the ROC curve, which closely resembles that of a perfect model. Perhaps with further hyperparameter tuning, a more detailed and potentially even deeper model can be created to improve accuracy even further.
+The training set achieves a spectacular 100% accuracy. However, this may be too good to be true, as overfitting is a possibility. The testing set accuracy confirms this, reaching a lower value. This is still a very good result from just a simple model put together. The performance is further emphasised by the ROC curve, which closely resembles that of a perfect model. Perhaps with further hyperparameter tuning, a more detailed and potentially even deeper model can be created to improve accuracy even further.
 
 ```{python, engine.path = 'C:\\Users\\faiza\\Anaconda3\\python.exe'}
 #ROC curve
