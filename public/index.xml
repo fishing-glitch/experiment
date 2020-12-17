@@ -41,6 +41,15 @@ Each project workflow comprises of data cleaning, exploratory data analysis, and
     </item>
     
     <item>
+      <title>Art and Machines - Neural Style Transfer</title>
+      <link>/posts/neuralstyle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/neuralstyle/</guid>
+      <description>IntroductionThe aim of this post is to explain the overall process of neural style transfer as simply as possible, while avoiding technical jargon unless necessary. This is done so that an individual who is not well versed in machine learning and data analytic techniques is also able to appreciate and understand the unique nature of this deep learning method, and its potential implications. The technique was introduced in the paper A Neural Algorithm of Artistic Style (Gatys et.</description>
+    </item>
+    
+    <item>
       <title>Brent Oil Prices - Time Series with ML Models</title>
       <link>/posts/brent-oil/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -93,15 +102,6 @@ The dataset contains some information about computers, with the dependant variab
       
       <guid>/posts/seizure_final/</guid>
       <description>IntroductionThis project attempts to classify whether a patient is suffering from an epileptic seizure or not based on certain known features. The dataset was freely obtained from the following link: https://www.kaggle.com/harunshimanto/epileptic-seizure-recognition. To summarise the data, the features comprise of individual data points of an EEG recording, monitoring a subject’s brain activity at different points in time. Further details about the specifications of these variables can be found via the given link.</description>
-    </item>
-    
-    <item>
-      <title>Finance and Data Analysis - Portfolio Optimization and Returns</title>
-      <link>/posts/finance-portfolio-analysis/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/finance-portfolio-analysis/</guid>
-      <description>IntroductionThe purpose of this project is to highlight potential applications of data analysis within the finance industry. When it comes to choosing viable securities to invest in based on a certain criteria, there are different methods that can be used, including fundamental or quantitative analysis. The focus in this project is on a quantitative approach, using the price of 10 different stocks to determine an optimum portfolio that generates required returns based on certain risks.</description>
     </item>
     
   </channel>
