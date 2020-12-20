@@ -87,21 +87,22 @@ The dataset contains some information about computers, with the dependant variab
     </item>
     
     <item>
+      <title>Dementia Classification - Interpreting models with LIME</title>
+      <link>/posts/dementia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/dementia/</guid>
+      <description>IntroductionThis is a fairly simple binary classification problem using data generated from MRI scans of the human brain. The data is provided by the Open Access Series of Imaging Studied (OASIS) to enable further research and discoveries in the neuroscience field. The dataset (https://www.kaggle.com/jboysen/mri-and-alzheimers) used in this specific project relates to longitudinal MRI data, with the following relevant features:
+Group: patient is either demented or non-demented (Target Variable)M.</description>
+    </item>
+    
+    <item>
       <title>Drugs and Memories - The impact of Interaction in Regressions</title>
       <link>/posts/drugs-and-memories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/posts/drugs-and-memories/</guid>
       <description>IntroductionThis is a simple analysis examining how variables interacting with each other can impact regression performance. The data set has only nine features, out of which there will be further feature selection, thereby making it easy to understand the effects. The data was freely obtained from https://www.kaggle.com/steveahn/memory-test-on-drugged-islanders-data. It describes the results of an experiment which observes the effects of anti-anxiety medicine on memory recall, while simultaneously including the effect of happy and sad memories.</description>
-    </item>
-    
-    <item>
-      <title>Epileptic Seizure Recognition with Deep Learning</title>
-      <link>/posts/seizure_final/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/seizure_final/</guid>
-      <description>IntroductionThis project attempts to classify whether a patient is suffering from an epileptic seizure or not based on certain known features. The dataset was freely obtained from the following link: https://www.kaggle.com/harunshimanto/epileptic-seizure-recognition. To summarise the data, the features comprise of individual data points of an EEG recording, monitoring a subject’s brain activity at different points in time. Further details about the specifications of these variables can be found via the given link.</description>
     </item>
     
   </channel>
