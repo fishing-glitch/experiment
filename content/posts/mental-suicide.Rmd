@@ -90,7 +90,7 @@ sum(is.na(HR_complete))
 
 ### Further Processing
 
-With the missing value imputation complete facilities and HR, the remaining datasets can now be processed further for creating the dashboard. The age_rate dataset provides the suicide rates for men, women and both divided by different age groups. Data from only 2016 is selected, and the data is then reshaped to make it suitable for visualization. Variables not required for this analysis are removed from the Happiness Report data (confidence intervals, year). These 4 datasets are then combined into one dataset representing all the information. The combination is carried out using an inner join to show information only for countries common in all 4 datasets. The crude_rate dataset is not added to the master dataset as it will be used separately. It shows the suicide rates for men, women and both across all ages for different countries. It is filtered to have the same countries as the master file. All these steps are carried out in the code chunk below. 
+With the missing value imputation complete for facilities and HR, the remaining datasets can now be processed further for creating the dashboard. The age_rate dataset provides the suicide rates for men, women and both divided by different age groups. Data from only 2016 is selected, and the data is then reshaped to make it suitable for visualization. Variables not required for this analysis are removed from the Happiness Report data (confidence intervals, year). These 4 datasets are then combined into one dataset representing all the information. The combination is carried out using an inner join to show information only for countries common in all 4 datasets. The crude_rate dataset is not added to the master dataset as it will be used separately. It shows the suicide rates for men, women and both across all ages for different countries. It is filtered to have the same countries as the master file. All these steps are carried out in the code chunk below. 
 
 ```{r warning=FALSE, message=FALSE, fig.width=7.5, fig.height=4.5}
 #age_rate
@@ -130,7 +130,7 @@ In total, there is complete data for 62 countries that will be used for the dash
 
 ### Dashboard
 
-The dashboard is split in 5 sections:
+The interactive dashboard is split in 5 sections:
 
 - visualizing the suicide rates for each country divided by different age groups
 - correlation of happiness score from the Happiness Report with the suicide rates for each country
@@ -138,7 +138,7 @@ The dashboard is split in 5 sections:
 - correlation of facilities and human resources with suicide rates
 - correlation of happiness score contributors and suicide rates
 
-The dashboard can be viewed [here](/posts/mental-dashboard.html). Through the visualizations shown, perhaps a better understanding behind suicide can be developed, thereby leading to better services and help for people suffering from suicide contemplation. 
+The dashboard can be viewed [here](/posts/mental-dashboard.html). Through the visualizations shown, perhaps an improved understanding of suicide can be developed, thereby leading to better services and help for people suffering from suicide contemplation. 
 
 
 

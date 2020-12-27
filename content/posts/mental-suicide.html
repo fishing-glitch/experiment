@@ -279,7 +279,7 @@ HR_complete &lt;- complete(HR_temp, 1)</code></pre>
 </div>
 <div id="further-processing" class="section level3">
 <h3>Further Processing</h3>
-<p>With the missing value imputation complete facilities and HR, the remaining datasets can now be processed further for creating the dashboard. The age_rate dataset provides the suicide rates for men, women and both divided by different age groups. Data from only 2016 is selected, and the data is then reshaped to make it suitable for visualization. Variables not required for this analysis are removed from the Happiness Report data (confidence intervals, year). These 4 datasets are then combined into one dataset representing all the information. The combination is carried out using an inner join to show information only for countries common in all 4 datasets. The crude_rate dataset is not added to the master dataset as it will be used separately. It shows the suicide rates for men, women and both across all ages for different countries. It is filtered to have the same countries as the master file. All these steps are carried out in the code chunk below.</p>
+<p>With the missing value imputation complete for facilities and HR, the remaining datasets can now be processed further for creating the dashboard. The age_rate dataset provides the suicide rates for men, women and both divided by different age groups. Data from only 2016 is selected, and the data is then reshaped to make it suitable for visualization. Variables not required for this analysis are removed from the Happiness Report data (confidence intervals, year). These 4 datasets are then combined into one dataset representing all the information. The combination is carried out using an inner join to show information only for countries common in all 4 datasets. The crude_rate dataset is not added to the master dataset as it will be used separately. It shows the suicide rates for men, women and both across all ages for different countries. It is filtered to have the same countries as the master file. All these steps are carried out in the code chunk below.</p>
 <pre class="r"><code>#age_rate
 names(age_rate)[names(age_rate) == &#39;X2016&#39;] &lt;- &#39;2016&#39;
 age_rate &lt;- age_rate[, 1:3]
@@ -315,7 +315,7 @@ crude_rate$Country &lt;- reorder(crude_rate$Country, crude_rate$Rate)</code></pr
 </div>
 <div id="dashboard" class="section level3">
 <h3>Dashboard</h3>
-<p>The dashboard is split in 5 sections:</p>
+<p>The interactive dashboard is split in 5 sections:</p>
 <ul>
 <li>visualizing the suicide rates for each country divided by different age groups</li>
 <li>correlation of happiness score from the Happiness Report with the suicide rates for each country</li>
@@ -323,5 +323,5 @@ crude_rate$Country &lt;- reorder(crude_rate$Country, crude_rate$Rate)</code></pr
 <li>correlation of facilities and human resources with suicide rates</li>
 <li>correlation of happiness score contributors and suicide rates</li>
 </ul>
-<p>The dashboard can be viewed <a href="/posts/mental-dashboard.html">here</a>. Through the visualizations shown, perhaps a better understanding behind suicide can be developed, thereby leading to better services and help for people suffering from suicide contemplation.</p>
+<p>The dashboard can be viewed <a href="/posts/mental-dashboard.html">here</a>. Through the visualizations shown, perhaps an improved understanding of suicide can be developed, thereby leading to better services and help for people suffering from suicide contemplation.</p>
 </div>
